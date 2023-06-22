@@ -109,7 +109,7 @@ class wrapper1D(torch.nn.Module):
             self.model.classifier = nn.Identity() 
 
         else:
-            modelname = 'roberta-base' if weight[:7] == 'roberta' else 'bert-base-uncased'
+            modelname = 'distilroberta-base' if weight[:7] == 'roberta' else 'bert-base-uncased'
             configuration = AutoConfig.from_pretrained(modelname)
             if drop_out is not None:
                 configuration.hidden_dropout_prob = drop_out
