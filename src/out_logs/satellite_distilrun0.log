@@ -1,0 +1,31 @@
+ot.gpu not found - coupling computation will be in cpu
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
+config:  ./configs/satellite.yaml
+args.device:  cuda
+NVIDIA GeForce RTX 3090
+target_seq_len 512
+/home/aryas/ORCA/src
+./datasets
+Traceback (most recent call last):
+  File "/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/numpy/lib/npyio.py", line 441, in load
+    return pickle.load(fid, **pickle_kwargs)
+_pickle.UnpicklingError: invalid load key, '<'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/aryas/ORCA/src/./main.py", line 384, in <module>
+    main(False, args)
+  File "/home/aryas/ORCA/src/./main.py", line 41, in main
+    model, embedder_stats = get_tgt_model(args, root, sample_shape, num_classes, loss, False, use_determined, context)
+  File "/home/aryas/ORCA/src/embedder.py", line 293, in get_tgt_model
+    tgt_train_loader, _, _, n_train, _, _, data_kwargs = get_data(root, args.dataset, args.batch_size, False, get_shape=True)
+  File "/home/aryas/ORCA/src/task_configs.py", line 50, in get_data
+    train_loader, val_loader, test_loader = load_satellite(root, batch_size, valid_split=valid_split)
+  File "/home/aryas/ORCA/src/data_loaders.py", line 518, in load_satellite
+    X_training, Y_training = np.load(train_file, allow_pickle=True)[()]['data'], np.load(train_file,allow_pickle=True)[()]['label']
+  File "/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/numpy/lib/npyio.py", line 443, in load
+    raise pickle.UnpicklingError(
+_pickle.UnpicklingError: Failed to interpret file './datasets/satellite_train.npy' as a pickle
