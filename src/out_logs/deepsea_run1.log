@@ -1,0 +1,203 @@
+ot.gpu not found - coupling computation will be in cpu
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 3 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
+config:  ./configs/deepsea.yaml
+args.device:  cuda
+NVIDIA GeForce RTX 3090
+target_seq_len 512
+/home/aryas/ORCA/src
+./datasets
+src feat shape torch.Size([2000, 768]) torch.Size([2000]) num classes 10
+class weights
+0 26815 74243 0.3611788316743666
+1 2813 74243 0.03788909392131245
+2 6083 74243 0.08193365031046698
+3 5032 74243 0.06777743356276013
+4 5264 74243 0.07090230728822919
+5 4835 74243 0.0651239847527713
+6 7193 74243 0.09688455477284054
+7 6271 74243 0.08446587557076088
+8 5281 74243 0.0711312851043196
+9 4656 74243 0.06271298304217232
+Params to learn: 	embedder.norm.weight	embedder.norm.bias	embedder.position_embeddings.weight	embedder.projection.weight	embedder.projection.bias	predictor.weight	predictor.bias
+[train embedder 0 0.000100 ] time elapsed: 11.2861 	otdd loss: 47.6149
+[train embedder 1 0.000100 ] time elapsed: 5.1413 	otdd loss: 47.2961
+[train embedder 2 0.000100 ] time elapsed: 5.2112 	otdd loss: 46.8253
+[train embedder 3 0.000100 ] time elapsed: 5.0700 	otdd loss: 46.4050
+[train embedder 4 0.000100 ] time elapsed: 5.8145 	otdd loss: 45.9625
+[train embedder 5 0.000100 ] time elapsed: 6.7866 	otdd loss: 45.6842
+[train embedder 6 0.000100 ] time elapsed: 6.3113 	otdd loss: 45.2870
+[train embedder 7 0.000100 ] time elapsed: 6.5667 	otdd loss: 44.9323
+[train embedder 8 0.000100 ] time elapsed: 6.7730 	otdd loss: 44.5062
+[train embedder 9 0.000100 ] time elapsed: 5.0673 	otdd loss: 44.0567
+[train embedder 10 0.000100 ] time elapsed: 5.7280 	otdd loss: 43.6918
+[train embedder 11 0.000100 ] time elapsed: 6.3180 	otdd loss: 43.3791
+[train embedder 12 0.000100 ] time elapsed: 5.8367 	otdd loss: 42.9997
+[train embedder 13 0.000100 ] time elapsed: 5.0322 	otdd loss: 42.6363
+[train embedder 14 0.000100 ] time elapsed: 5.2002 	otdd loss: 42.3081
+[train embedder 15 0.000100 ] time elapsed: 5.0003 	otdd loss: 41.9013
+[train embedder 16 0.000100 ] time elapsed: 5.0532 	otdd loss: 41.7852
+[train embedder 17 0.000100 ] time elapsed: 4.7807 	otdd loss: 41.1638
+[train embedder 18 0.000100 ] time elapsed: 5.1246 	otdd loss: 40.8613
+[train embedder 19 0.000100 ] time elapsed: 7.3687 	otdd loss: 40.5833
+[train embedder 20 0.000100 ] time elapsed: 5.3864 	otdd loss: 40.1643
+[train embedder 21 0.000020 ] time elapsed: 5.8153 	otdd loss: 39.8239
+[train embedder 22 0.000020 ] time elapsed: 7.3850 	otdd loss: 39.7794
+[train embedder 23 0.000020 ] time elapsed: 6.7391 	otdd loss: 39.6484
+[train embedder 24 0.000020 ] time elapsed: 5.6161 	otdd loss: 39.6614
+[train embedder 25 0.000020 ] time elapsed: 5.5468 	otdd loss: 39.5469
+[train embedder 26 0.000020 ] time elapsed: 4.9597 	otdd loss: 39.3727
+[train embedder 27 0.000020 ] time elapsed: 6.0495 	otdd loss: 39.2910
+[train embedder 28 0.000020 ] time elapsed: 5.2033 	otdd loss: 39.4049
+[train embedder 29 0.000020 ] time elapsed: 5.1024 	otdd loss: 39.2924
+[train embedder 30 0.000020 ] time elapsed: 4.9879 	otdd loss: 39.2394
+[train embedder 31 0.000020 ] time elapsed: 6.8247 	otdd loss: 39.1116
+[train embedder 32 0.000020 ] time elapsed: 4.8310 	otdd loss: 38.9965
+[train embedder 33 0.000020 ] time elapsed: 4.8471 	otdd loss: 38.9656
+[train embedder 34 0.000020 ] time elapsed: 4.6975 	otdd loss: 39.0366
+[train embedder 35 0.000020 ] time elapsed: 4.8060 	otdd loss: 38.8858
+[train embedder 36 0.000020 ] time elapsed: 5.1981 	otdd loss: 38.7511
+[train embedder 37 0.000020 ] time elapsed: 4.8503 	otdd loss: 38.8087
+[train embedder 38 0.000020 ] time elapsed: 5.9747 	otdd loss: 38.8881
+[train embedder 39 0.000020 ] time elapsed: 5.0022 	otdd loss: 38.6890
+[train embedder 40 0.000020 ] time elapsed: 5.6714 	otdd loss: 38.4711
+[train embedder 41 0.000004 ] time elapsed: 5.1904 	otdd loss: 38.5521
+[train embedder 42 0.000004 ] time elapsed: 5.6766 	otdd loss: 38.5214
+[train embedder 43 0.000004 ] time elapsed: 5.4249 	otdd loss: 38.4320
+[train embedder 44 0.000004 ] time elapsed: 5.5907 	otdd loss: 38.4735
+[train embedder 45 0.000004 ] time elapsed: 5.1968 	otdd loss: 38.3966
+[train embedder 46 0.000004 ] time elapsed: 5.3607 	otdd loss: 38.4686
+[train embedder 47 0.000004 ] time elapsed: 5.1934 	otdd loss: 38.3464
+[train embedder 48 0.000004 ] time elapsed: 6.3104 	otdd loss: 38.4204
+[train embedder 49 0.000004 ] time elapsed: 6.0256 	otdd loss: 38.4228
+[train embedder 50 0.000004 ] time elapsed: 6.6070 	otdd loss: 38.4212
+[train embedder 51 0.000004 ] time elapsed: 5.1841 	otdd loss: 38.3629
+[train embedder 52 0.000004 ] time elapsed: 5.5886 	otdd loss: 38.3780
+[train embedder 53 0.000004 ] time elapsed: 5.9437 	otdd loss: 38.1775
+[train embedder 54 0.000004 ] time elapsed: 5.9272 	otdd loss: 38.4111
+[train embedder 55 0.000004 ] time elapsed: 5.6540 	otdd loss: 38.2321
+[train embedder 56 0.000004 ] time elapsed: 5.8780 	otdd loss: 38.3271
+[train embedder 57 0.000004 ] time elapsed: 5.5506 	otdd loss: 38.2218
+[train embedder 58 0.000004 ] time elapsed: 4.7662 	otdd loss: 38.2275
+[train embedder 59 0.000004 ] time elapsed: 4.6502 	otdd loss: 38.2036
+Params to learn: 	model.encoder.layer.0.attention.self.query.weight	model.encoder.layer.0.attention.self.query.bias	model.encoder.layer.0.attention.self.key.weight	model.encoder.layer.0.attention.self.key.bias	model.encoder.layer.0.attention.self.value.weight	model.encoder.layer.0.attention.self.value.bias	model.encoder.layer.0.attention.output.dense.weight	model.encoder.layer.0.attention.output.dense.bias	model.encoder.layer.0.attention.output.LayerNorm.weight	model.encoder.layer.0.attention.output.LayerNorm.bias	model.encoder.layer.0.intermediate.dense.weight	model.encoder.layer.0.intermediate.dense.bias	model.encoder.layer.0.output.dense.weight	model.encoder.layer.0.output.dense.bias	model.encoder.layer.0.output.LayerNorm.weight	model.encoder.layer.0.output.LayerNorm.bias	model.encoder.layer.1.attention.self.query.weight	model.encoder.layer.1.attention.self.query.bias	model.encoder.layer.1.attention.self.key.weight	model.encoder.layer.1.attention.self.key.bias	model.encoder.layer.1.attention.self.value.weight	model.encoder.layer.1.attention.self.value.bias	model.encoder.layer.1.attention.output.dense.weight	model.encoder.layer.1.attention.output.dense.bias	model.encoder.layer.1.attention.output.LayerNorm.weight	model.encoder.layer.1.attention.output.LayerNorm.bias	model.encoder.layer.1.intermediate.dense.weight	model.encoder.layer.1.intermediate.dense.bias	model.encoder.layer.1.output.dense.weight	model.encoder.layer.1.output.dense.bias	model.encoder.layer.1.output.LayerNorm.weight	model.encoder.layer.1.output.LayerNorm.bias	model.encoder.layer.2.attention.self.query.weight	model.encoder.layer.2.attention.self.query.bias	model.encoder.layer.2.attention.self.key.weight	model.encoder.layer.2.attention.self.key.bias	model.encoder.layer.2.attention.self.value.weight	model.encoder.layer.2.attention.self.value.bias	model.encoder.layer.2.attention.output.dense.weight	model.encoder.layer.2.attention.output.dense.bias	model.encoder.layer.2.attention.output.LayerNorm.weight	model.encoder.layer.2.attention.output.LayerNorm.bias	model.encoder.layer.2.intermediate.dense.weight	model.encoder.layer.2.intermediate.dense.bias	model.encoder.layer.2.output.dense.weight	model.encoder.layer.2.output.dense.bias	model.encoder.layer.2.output.LayerNorm.weight	model.encoder.layer.2.output.LayerNorm.bias	model.encoder.layer.3.attention.self.query.weight	model.encoder.layer.3.attention.self.query.bias	model.encoder.layer.3.attention.self.key.weight	model.encoder.layer.3.attention.self.key.bias	model.encoder.layer.3.attention.self.value.weight	model.encoder.layer.3.attention.self.value.bias	model.encoder.layer.3.attention.output.dense.weight	model.encoder.layer.3.attention.output.dense.bias	model.encoder.layer.3.attention.output.LayerNorm.weight	model.encoder.layer.3.attention.output.LayerNorm.bias	model.encoder.layer.3.intermediate.dense.weight	model.encoder.layer.3.intermediate.dense.bias	model.encoder.layer.3.output.dense.weight	model.encoder.layer.3.output.dense.bias	model.encoder.layer.3.output.LayerNorm.weight	model.encoder.layer.3.output.LayerNorm.bias	model.encoder.layer.4.attention.self.query.weight	model.encoder.layer.4.attention.self.query.bias	model.encoder.layer.4.attention.self.key.weight	model.encoder.layer.4.attention.self.key.bias	model.encoder.layer.4.attention.self.value.weight	model.encoder.layer.4.attention.self.value.bias	model.encoder.layer.4.attention.output.dense.weight	model.encoder.layer.4.attention.output.dense.bias	model.encoder.layer.4.attention.output.LayerNorm.weight	model.encoder.layer.4.attention.output.LayerNorm.bias	model.encoder.layer.4.intermediate.dense.weight	model.encoder.layer.4.intermediate.dense.bias	model.encoder.layer.4.output.dense.weight	model.encoder.layer.4.output.dense.bias	model.encoder.layer.4.output.LayerNorm.weight	model.encoder.layer.4.output.LayerNorm.bias	model.encoder.layer.5.attention.self.query.weight	model.encoder.layer.5.attention.self.query.bias	model.encoder.layer.5.attention.self.key.weight	model.encoder.layer.5.attention.self.key.bias	model.encoder.layer.5.attention.self.value.weight	model.encoder.layer.5.attention.self.value.bias	model.encoder.layer.5.attention.output.dense.weight	model.encoder.layer.5.attention.output.dense.bias	model.encoder.layer.5.attention.output.LayerNorm.weight	model.encoder.layer.5.attention.output.LayerNorm.bias	model.encoder.layer.5.intermediate.dense.weight	model.encoder.layer.5.intermediate.dense.bias	model.encoder.layer.5.output.dense.weight	model.encoder.layer.5.output.dense.bias	model.encoder.layer.5.output.LayerNorm.weight	model.encoder.layer.5.output.LayerNorm.bias	model.encoder.layer.6.attention.self.query.weight	model.encoder.layer.6.attention.self.query.bias	model.encoder.layer.6.attention.self.key.weight	model.encoder.layer.6.attention.self.key.bias	model.encoder.layer.6.attention.self.value.weight	model.encoder.layer.6.attention.self.value.bias	model.encoder.layer.6.attention.output.dense.weight	model.encoder.layer.6.attention.output.dense.bias	model.encoder.layer.6.attention.output.LayerNorm.weight	model.encoder.layer.6.attention.output.LayerNorm.bias	model.encoder.layer.6.intermediate.dense.weight	model.encoder.layer.6.intermediate.dense.bias	model.encoder.layer.6.output.dense.weight	model.encoder.layer.6.output.dense.bias	model.encoder.layer.6.output.LayerNorm.weight	model.encoder.layer.6.output.LayerNorm.bias	model.encoder.layer.7.attention.self.query.weight	model.encoder.layer.7.attention.self.query.bias	model.encoder.layer.7.attention.self.key.weight	model.encoder.layer.7.attention.self.key.bias	model.encoder.layer.7.attention.self.value.weight	model.encoder.layer.7.attention.self.value.bias	model.encoder.layer.7.attention.output.dense.weight	model.encoder.layer.7.attention.output.dense.bias	model.encoder.layer.7.attention.output.LayerNorm.weight	model.encoder.layer.7.attention.output.LayerNorm.bias	model.encoder.layer.7.intermediate.dense.weight	model.encoder.layer.7.intermediate.dense.bias	model.encoder.layer.7.output.dense.weight	model.encoder.layer.7.output.dense.bias	model.encoder.layer.7.output.LayerNorm.weight	model.encoder.layer.7.output.LayerNorm.bias	model.encoder.layer.8.attention.self.query.weight	model.encoder.layer.8.attention.self.query.bias	model.encoder.layer.8.attention.self.key.weight	model.encoder.layer.8.attention.self.key.bias	model.encoder.layer.8.attention.self.value.weight	model.encoder.layer.8.attention.self.value.bias	model.encoder.layer.8.attention.output.dense.weight	model.encoder.layer.8.attention.output.dense.bias	model.encoder.layer.8.attention.output.LayerNorm.weight	model.encoder.layer.8.attention.output.LayerNorm.bias	model.encoder.layer.8.intermediate.dense.weight	model.encoder.layer.8.intermediate.dense.bias	model.encoder.layer.8.output.dense.weight	model.encoder.layer.8.output.dense.bias	model.encoder.layer.8.output.LayerNorm.weight	model.encoder.layer.8.output.LayerNorm.bias	model.encoder.layer.9.attention.self.query.weight	model.encoder.layer.9.attention.self.query.bias	model.encoder.layer.9.attention.self.key.weight	model.encoder.layer.9.attention.self.key.bias	model.encoder.layer.9.attention.self.value.weight	model.encoder.layer.9.attention.self.value.bias	model.encoder.layer.9.attention.output.dense.weight	model.encoder.layer.9.attention.output.dense.bias	model.encoder.layer.9.attention.output.LayerNorm.weight	model.encoder.layer.9.attention.output.LayerNorm.bias	model.encoder.layer.9.intermediate.dense.weight	model.encoder.layer.9.intermediate.dense.bias	model.encoder.layer.9.output.dense.weight	model.encoder.layer.9.output.dense.bias	model.encoder.layer.9.output.LayerNorm.weight	model.encoder.layer.9.output.LayerNorm.bias	model.encoder.layer.10.attention.self.query.weight	model.encoder.layer.10.attention.self.query.bias	model.encoder.layer.10.attention.self.key.weight	model.encoder.layer.10.attention.self.key.bias	model.encoder.layer.10.attention.self.value.weight	model.encoder.layer.10.attention.self.value.bias	model.encoder.layer.10.attention.output.dense.weight	model.encoder.layer.10.attention.output.dense.bias	model.encoder.layer.10.attention.output.LayerNorm.weight	model.encoder.layer.10.attention.output.LayerNorm.bias	model.encoder.layer.10.intermediate.dense.weight	model.encoder.layer.10.intermediate.dense.bias	model.encoder.layer.10.output.dense.weight	model.encoder.layer.10.output.dense.bias	model.encoder.layer.10.output.LayerNorm.weight	model.encoder.layer.10.output.LayerNorm.bias	model.encoder.layer.11.attention.self.query.weight	model.encoder.layer.11.attention.self.query.bias	model.encoder.layer.11.attention.self.key.weight	model.encoder.layer.11.attention.self.key.bias	model.encoder.layer.11.attention.self.value.weight	model.encoder.layer.11.attention.self.value.bias	model.encoder.layer.11.attention.output.dense.weight	model.encoder.layer.11.attention.output.dense.bias	model.encoder.layer.11.attention.output.LayerNorm.weight	model.encoder.layer.11.attention.output.LayerNorm.bias	model.encoder.layer.11.intermediate.dense.weight	model.encoder.layer.11.intermediate.dense.bias	model.encoder.layer.11.output.dense.weight	model.encoder.layer.11.output.dense.bias	model.encoder.layer.11.output.LayerNorm.weight	model.encoder.layer.11.output.LayerNorm.bias	embedder.norm.weight	embedder.norm.bias	embedder.position_embeddings.weight	embedder.projection.weight	embedder.projection.bias	predictor.weight	predictor.bias
+using cuda
+
+------- Experiment Summary --------
+id: 1
+dataset: DEEPSEA 	batch size: 16 	lr: 1e-05
+num train batch: 4641 	num validation batch: 9313 	num test batch: 9313
+finetune method: all
+param count: 85485348 85485348
+wrapper1D(
+  (model): RobertaModel(
+    (embeddings): embedder_placeholder()
+    (encoder): RobertaEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x RobertaLayer(
+          (attention): RobertaAttention(
+            (self): RobertaSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0, inplace=False)
+            )
+            (output): RobertaSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0, inplace=False)
+            )
+          )
+          (intermediate): RobertaIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): RobertaOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): adaptive_pooler(
+      (pooler): AdaptiveAvgPool1d(output_size=1)
+    )
+  )
+  (embedder): Embeddings1D(
+    (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (position_embeddings): Embedding(514, 768, padding_idx=1)
+    (projection): Conv1d(4, 768, kernel_size=(2,), stride=(2,))
+  )
+  (predictor): Linear(in_features=768, out_features=36, bias=True)
+)
+
+------- Start Training --------
+epoch:  0
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 0 0.000001 ] time elapsed: 1568.2474 	train loss: 0.8553 	val loss: 0.8244 	val score: 0.3760 	best val score: 0.3760
+epoch:  1
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 1 0.000002 ] time elapsed: 1567.9504 	train loss: 0.8280 	val loss: 0.8152 	val score: 0.3573 	best val score: 0.3573
+epoch:  2
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 2 0.000003 ] time elapsed: 1570.0760 	train loss: 0.8220 	val loss: 0.8258 	val score: 0.3561 	best val score: 0.3561
+epoch:  3
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 3 0.000004 ] time elapsed: 1567.2994 	train loss: 0.8195 	val loss: 0.8089 	val score: 0.3508 	best val score: 0.3508
+epoch:  4
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 4 0.000005 ] time elapsed: 1571.8559 	train loss: 0.8181 	val loss: 0.8086 	val score: 0.3466 	best val score: 0.3466
+epoch:  5
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 5 0.000006 ] time elapsed: 1571.0601 	train loss: 0.8164 	val loss: 0.8076 	val score: 0.3479 	best val score: 0.3466
+epoch:  6
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 6 0.000007 ] time elapsed: 1570.5663 	train loss: 0.8146 	val loss: 0.8050 	val score: 0.3426 	best val score: 0.3426
+epoch:  7
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 7 0.000008 ] time elapsed: 1571.2489 	train loss: 0.8123 	val loss: 0.8073 	val score: 0.3419 	best val score: 0.3419
+epoch:  8
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 8 0.000009 ] time elapsed: 1568.9243 	train loss: 0.8101 	val loss: 0.8086 	val score: 0.3424 	best val score: 0.3419
+epoch:  9
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 9 0.000010 ] time elapsed: 1577.2502 	train loss: 0.8083 	val loss: 0.8087 	val score: 0.3423 	best val score: 0.3419
+epoch:  10
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 10 0.000009 ] time elapsed: 1576.2742 	train loss: 0.8042 	val loss: 0.8084 	val score: 0.3386 	best val score: 0.3386
+epoch:  11
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 11 0.000009 ] time elapsed: 1575.8787 	train loss: 0.7969 	val loss: 0.8039 	val score: 0.3377 	best val score: 0.3377
+epoch:  12
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 12 0.000008 ] time elapsed: 1574.6590 	train loss: 0.7860 	val loss: 0.8114 	val score: 0.3381 	best val score: 0.3377
+
+------- Start Test --------
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[test last] 	time elapsed: 1120.1190 	test loss: 0.8115 	test score: 0.3381
+[test best-validated] 	time elapsed: 1119.8358 	test loss: 0.8039 	test score: 0.3375

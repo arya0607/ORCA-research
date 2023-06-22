@@ -16,6 +16,9 @@ from embedder import get_tgt_model
 def main(use_determined, args, info=None, context=None):
 
     args.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    print("args.device: ", args.device)
+    for i in range(torch.cuda.device_count()):
+        print(torch.cuda.get_device_properties(i).name)
     root = '/datasets' if use_determined else './datasets'
 
     torch.cuda.empty_cache()
@@ -44,12 +47,13 @@ def main(use_determined, args, info=None, context=None):
     
     model, ep_start, id_best, train_score, train_losses, embedder_stats_saved = load_state(use_determined, args, context, model, None, None, n_train, freq=args.validation_freq, test=True)
     embedder_stats = embedder_stats if embedder_stats_saved is None else embedder_stats_saved
-    
+    print("embedder_stats_saved: ", embedder_stats_saved)
     offset = 0 if ep_start == 0 else 1
     args, model, optimizer, scheduler = get_optimizer_scheduler(args, model, module=None if args.predictor_epochs == 0 or ep_start >= args.predictor_epochs else 'predictor', n_train=n_train)
     train_full = args.predictor_epochs == 0 or ep_start >= args.predictor_epochs
     
     if args.device == 'cuda':
+        print("using cuda")
         model.cuda()
         try:
             loss.cuda()
@@ -73,6 +77,7 @@ def main(use_determined, args, info=None, context=None):
     print("\n------- Start Training --------" if ep_start == 0 else "\n------- Resume Training --------")
 
     for ep in range(ep_start, args.epochs + args.predictor_epochs):
+        print("epoch: ", ep)
         if not train_full and ep >= args.predictor_epochs:
             args, model, optimizer, scheduler = get_optimizer_scheduler(args, model, module=None, n_train=n_train)
             train_full = True
@@ -310,7 +315,7 @@ def save_with_path(path, args, model, optimizer, scheduler, train_score, train_l
 
 def load_embedder(use_determined, args):
     if not use_determined:
-        path = 'results/'  + args.dataset +'/' + str(args.finetune_method) + '_' + str(args.experiment_id) + "/" + str(args.seed)
+        path = 'results/'  + args.dataset + '/' + str(args.finetune_method) + '_' + str(args.experiment_id) + "/" + str(args.seed)
         return os.path.isfile(os.path.join(path, 'state_dict.pt'))
     else:
 
@@ -373,7 +378,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if args.config is not None:     
         import yaml
-
+        print("config: ", args.config )
         with open(args.config, 'r') as stream:
             args = AttrDict(yaml.safe_load(stream)['hyperparameters'])
             main(False, args)

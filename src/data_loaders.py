@@ -302,16 +302,18 @@ def load_deepsea(root, batch_size, one_hot = True, valid_split=-1):
     else:
         x_test = torch.from_numpy(np.argmax(data['x_test'], axis=2)).unsqueeze(-2).float()
     y_test = torch.from_numpy(data['y_test']).float()   # shape = (149400, 36)
+
+    count_workers = 3
     
     if valid_split > 0:
-        train_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_train, y_train), batch_size = batch_size, shuffle=True, num_workers=4, pin_memory=True)
-        val_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_val, y_val), batch_size = batch_size, shuffle=True, num_workers=4, pin_memory=True)
-        test_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_test, y_test), batch_size = batch_size, shuffle=True, num_workers=4, pin_memory=True)
+        train_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_train, y_train), batch_size = batch_size, shuffle=True, num_workers=count_workers, pin_memory=True)
+        val_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_val, y_val), batch_size = batch_size, shuffle=True, num_workers=count_workers, pin_memory=True)
+        test_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_test, y_test), batch_size = batch_size, shuffle=True, num_workers=count_workers, pin_memory=True)
         
         return train_loader, val_loader, test_loader
     else:
-        train_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_train, y_train), batch_size = batch_size, shuffle=True, num_workers=4, pin_memory=True)
-        test_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_test, y_test), batch_size = batch_size, shuffle=True, num_workers=4, pin_memory=True)
+        train_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_train, y_train), batch_size = batch_size, shuffle=True, num_workers=count_workers, pin_memory=True)
+        test_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_test, y_test), batch_size = batch_size, shuffle=True, num_workers=count_workers, pin_memory=True)
 
     return train_loader, None, test_loader
 
@@ -2211,7 +2213,8 @@ def load_text(root, batch_size, valid_split=-1, maxsize=None):
 
     file_path = os.path.join(path, 'text_xs_32.npy')
     load_success = False
-
+    print(os.getcwd())
+    print(path)
     while not load_success:
         try:
             train_data = np.load(os.path.join(path, 'text_xs_32.npy'), allow_pickle =True)
@@ -2219,6 +2222,7 @@ def load_text(root, batch_size, valid_split=-1, maxsize=None):
             load_success = True
         except:
             cwd = os.getcwd()
+            print(cwd)
             os.chdir(path)
             try:
                 os.system("wget -O text_xs_32.npy \"https://www.dropbox.com/s/yhlf25n8rzmdrtp/text_xs_32.npy?dl=1\"")

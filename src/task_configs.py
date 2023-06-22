@@ -331,7 +331,7 @@ def get_optimizer_scheduler(args, model, module=None, n_train=1):
             if predictor_optimizer_params['lr'] <= 0.001:
                 predictor_optimizer_params['lr'] *= 10
             predictor_optimizer = get_optimizer(args.optimizer.name, predictor_optimizer_params)(get_params_to_update(model, ""))
-            lr_lambda, args.lr_sched_iter = get_scheduler(args.no_warmup_scheduler.name, args.no_warmup_scheduler.params, args.predictor_epochs, 1)
+            lr_lambda, args.lr_sched_iter =_scheduler(args.no_warmup_scheduler.name, args.no_warmup_scheduler.params, args.predictor_epochs, 1)
             predictor_scheduler = torch.optim.lr_scheduler.LambdaLR(predictor_optimizer, lr_lambda=lr_lambda)
 
             return args, model, predictor_optimizer, predictor_scheduler
