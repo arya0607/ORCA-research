@@ -189,3 +189,16 @@ epoch:  12
   warnings.warn(_create_warning_msg(
 [train full 12 0.000001 ] time elapsed: 1587.4789 	train loss: 0.6797 	val loss: 0.8183 	val score: 0.3332 	best val score: 0.3299
 epoch:  13
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 13 0.000001 ] time elapsed: 1585.3907 	train loss: 0.6804 	val loss: 0.7643 	val score: 0.3202 	best val score: 0.3202
+epoch:  14
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[train full 14 0.000001 ] time elapsed: 1579.9461 	train loss: 0.6831 	val loss: 0.7851 	val score: 0.3260 	best val score: 0.3202
+
+------- Start Test --------
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[test last] 	time elapsed: 42.7605 	test loss: 0.7851 	test score: 0.3260
+[test best-validated] 	time elapsed: 42.2833 	test loss: 0.7643 	test score: 0.3202

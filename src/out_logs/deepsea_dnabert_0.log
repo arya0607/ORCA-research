@@ -1,0 +1,171 @@
+ot.gpu not found - coupling computation will be in cpu
+/home/aryas/miniconda3/envs/myenv/lib/python3.9/site-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 3 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+Some weights of the model checkpoint at ./../../DNABERT/6_pretrained/pytorch_model.bin were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
+config:  ./configs/deepsea.yaml
+args.device:  cuda
+NVIDIA GeForce RTX 3090
+NVIDIA GeForce RTX 3090
+target_seq_len 512
+/home/aryas/ORCA/src
+./datasets
+src feat shape torch.Size([2000, 768]) torch.Size([2000]) num classes 10
+class weights
+0 26815 74243 0.3611788316743666
+1 2813 74243 0.03788909392131245
+2 6083 74243 0.08193365031046698
+3 5032 74243 0.06777743356276013
+4 5264 74243 0.07090230728822919
+5 4835 74243 0.0651239847527713
+6 7193 74243 0.09688455477284054
+7 6271 74243 0.08446587557076088
+8 5281 74243 0.0711312851043196
+9 4656 74243 0.06271298304217232
+Params to learn: 	embedder.norm.weight	embedder.norm.bias	embedder.position_embeddings.weight	embedder.projection.weight	embedder.projection.bias	predictor.weight	predictor.bias
+[train embedder 0 0.000100 ] time elapsed: 5.4304 	otdd loss: 76.7909
+[train embedder 1 0.000100 ] time elapsed: 3.7058 	otdd loss: 75.9888
+[train embedder 2 0.000100 ] time elapsed: 3.7102 	otdd loss: 75.5718
+[train embedder 3 0.000100 ] time elapsed: 3.8632 	otdd loss: 74.7545
+[train embedder 4 0.000100 ] time elapsed: 3.7603 	otdd loss: 74.2044
+[train embedder 5 0.000100 ] time elapsed: 3.7476 	otdd loss: 73.1880
+[train embedder 6 0.000100 ] time elapsed: 3.9451 	otdd loss: 72.8263
+[train embedder 7 0.000100 ] time elapsed: 3.7313 	otdd loss: 72.0977
+[train embedder 8 0.000100 ] time elapsed: 3.8339 	otdd loss: 71.4254
+[train embedder 9 0.000100 ] time elapsed: 3.6799 	otdd loss: 70.8830
+[train embedder 10 0.000100 ] time elapsed: 3.8384 	otdd loss: 70.1507
+[train embedder 11 0.000100 ] time elapsed: 3.7231 	otdd loss: 69.5283
+[train embedder 12 0.000100 ] time elapsed: 3.7885 	otdd loss: 68.9370
+[train embedder 13 0.000100 ] time elapsed: 3.7464 	otdd loss: 68.1742
+[train embedder 14 0.000100 ] time elapsed: 3.7344 	otdd loss: 67.4909
+[train embedder 15 0.000100 ] time elapsed: 3.8357 	otdd loss: 67.0513
+[train embedder 16 0.000100 ] time elapsed: 3.8088 	otdd loss: 66.2626
+[train embedder 17 0.000100 ] time elapsed: 3.7327 	otdd loss: 65.9251
+[train embedder 18 0.000100 ] time elapsed: 3.7076 	otdd loss: 65.1670
+[train embedder 19 0.000100 ] time elapsed: 3.9273 	otdd loss: 64.5192
+[train embedder 20 0.000100 ] time elapsed: 3.7780 	otdd loss: 63.9086
+[train embedder 21 0.000020 ] time elapsed: 3.8175 	otdd loss: 63.2570
+[train embedder 22 0.000020 ] time elapsed: 3.7842 	otdd loss: 63.1321
+[train embedder 23 0.000020 ] time elapsed: 3.7648 	otdd loss: 63.0465
+[train embedder 24 0.000020 ] time elapsed: 3.8356 	otdd loss: 63.1070
+[train embedder 25 0.000020 ] time elapsed: 3.8009 	otdd loss: 62.7289
+[train embedder 26 0.000020 ] time elapsed: 3.7243 	otdd loss: 62.7005
+[train embedder 27 0.000020 ] time elapsed: 3.7940 	otdd loss: 62.5464
+[train embedder 28 0.000020 ] time elapsed: 3.8035 	otdd loss: 62.4699
+[train embedder 29 0.000020 ] time elapsed: 3.9115 	otdd loss: 62.6065
+[train embedder 30 0.000020 ] time elapsed: 3.8197 	otdd loss: 62.4705
+[train embedder 31 0.000020 ] time elapsed: 3.8931 	otdd loss: 62.2230
+[train embedder 32 0.000020 ] time elapsed: 3.8246 	otdd loss: 61.9429
+[train embedder 33 0.000020 ] time elapsed: 3.8159 	otdd loss: 62.0546
+[train embedder 34 0.000020 ] time elapsed: 3.7304 	otdd loss: 61.7982
+[train embedder 35 0.000020 ] time elapsed: 3.9342 	otdd loss: 61.7028
+[train embedder 36 0.000020 ] time elapsed: 3.7114 	otdd loss: 61.6584
+[train embedder 37 0.000020 ] time elapsed: 3.8002 	otdd loss: 61.5103
+[train embedder 38 0.000020 ] time elapsed: 3.8642 	otdd loss: 61.5059
+[train embedder 39 0.000020 ] time elapsed: 3.7184 	otdd loss: 61.2805
+[train embedder 40 0.000020 ] time elapsed: 3.7213 	otdd loss: 61.2120
+[train embedder 41 0.000004 ] time elapsed: 3.7189 	otdd loss: 60.9177
+[train embedder 42 0.000004 ] time elapsed: 3.8639 	otdd loss: 60.9260
+[train embedder 43 0.000004 ] time elapsed: 3.8149 	otdd loss: 60.9741
+[train embedder 44 0.000004 ] time elapsed: 3.7917 	otdd loss: 60.8623
+[train embedder 45 0.000004 ] time elapsed: 3.8111 	otdd loss: 61.1244
+[train embedder 46 0.000004 ] time elapsed: 3.8248 	otdd loss: 61.0901
+[train embedder 47 0.000004 ] time elapsed: 3.7056 	otdd loss: 60.8915
+[train embedder 48 0.000004 ] time elapsed: 3.7974 	otdd loss: 60.7273
+[train embedder 49 0.000004 ] time elapsed: 3.7584 	otdd loss: 60.8805
+[train embedder 50 0.000004 ] time elapsed: 3.7969 	otdd loss: 60.9058
+[train embedder 51 0.000004 ] time elapsed: 3.8106 	otdd loss: 60.7717
+[train embedder 52 0.000004 ] time elapsed: 3.7395 	otdd loss: 60.7660
+[train embedder 53 0.000004 ] time elapsed: 3.9338 	otdd loss: 60.9276
+[train embedder 54 0.000004 ] time elapsed: 3.7494 	otdd loss: 60.6675
+[train embedder 55 0.000004 ] time elapsed: 3.7893 	otdd loss: 60.8643
+[train embedder 56 0.000004 ] time elapsed: 3.8495 	otdd loss: 60.5828
+[train embedder 57 0.000004 ] time elapsed: 3.7570 	otdd loss: 60.6026
+[train embedder 58 0.000004 ] time elapsed: 3.7691 	otdd loss: 60.6288
+[train embedder 59 0.000004 ] time elapsed: 3.7517 	otdd loss: 60.5700
+embedder_stats_saved:  None
+Params to learn: 	model.encoder.layer.0.attention.self.query.weight	model.encoder.layer.0.attention.self.query.bias	model.encoder.layer.0.attention.self.key.weight	model.encoder.layer.0.attention.self.key.bias	model.encoder.layer.0.attention.self.value.weight	model.encoder.layer.0.attention.self.value.bias	model.encoder.layer.0.attention.output.dense.weight	model.encoder.layer.0.attention.output.dense.bias	model.encoder.layer.0.attention.output.LayerNorm.weight	model.encoder.layer.0.attention.output.LayerNorm.bias	model.encoder.layer.0.intermediate.dense.weight	model.encoder.layer.0.intermediate.dense.bias	model.encoder.layer.0.output.dense.weight	model.encoder.layer.0.output.dense.bias	model.encoder.layer.0.output.LayerNorm.weight	model.encoder.layer.0.output.LayerNorm.bias	model.encoder.layer.1.attention.self.query.weight	model.encoder.layer.1.attention.self.query.bias	model.encoder.layer.1.attention.self.key.weight	model.encoder.layer.1.attention.self.key.bias	model.encoder.layer.1.attention.self.value.weight	model.encoder.layer.1.attention.self.value.bias	model.encoder.layer.1.attention.output.dense.weight	model.encoder.layer.1.attention.output.dense.bias	model.encoder.layer.1.attention.output.LayerNorm.weight	model.encoder.layer.1.attention.output.LayerNorm.bias	model.encoder.layer.1.intermediate.dense.weight	model.encoder.layer.1.intermediate.dense.bias	model.encoder.layer.1.output.dense.weight	model.encoder.layer.1.output.dense.bias	model.encoder.layer.1.output.LayerNorm.weight	model.encoder.layer.1.output.LayerNorm.bias	model.encoder.layer.2.attention.self.query.weight	model.encoder.layer.2.attention.self.query.bias	model.encoder.layer.2.attention.self.key.weight	model.encoder.layer.2.attention.self.key.bias	model.encoder.layer.2.attention.self.value.weight	model.encoder.layer.2.attention.self.value.bias	model.encoder.layer.2.attention.output.dense.weight	model.encoder.layer.2.attention.output.dense.bias	model.encoder.layer.2.attention.output.LayerNorm.weight	model.encoder.layer.2.attention.output.LayerNorm.bias	model.encoder.layer.2.intermediate.dense.weight	model.encoder.layer.2.intermediate.dense.bias	model.encoder.layer.2.output.dense.weight	model.encoder.layer.2.output.dense.bias	model.encoder.layer.2.output.LayerNorm.weight	model.encoder.layer.2.output.LayerNorm.bias	model.encoder.layer.3.attention.self.query.weight	model.encoder.layer.3.attention.self.query.bias	model.encoder.layer.3.attention.self.key.weight	model.encoder.layer.3.attention.self.key.bias	model.encoder.layer.3.attention.self.value.weight	model.encoder.layer.3.attention.self.value.bias	model.encoder.layer.3.attention.output.dense.weight	model.encoder.layer.3.attention.output.dense.bias	model.encoder.layer.3.attention.output.LayerNorm.weight	model.encoder.layer.3.attention.output.LayerNorm.bias	model.encoder.layer.3.intermediate.dense.weight	model.encoder.layer.3.intermediate.dense.bias	model.encoder.layer.3.output.dense.weight	model.encoder.layer.3.output.dense.bias	model.encoder.layer.3.output.LayerNorm.weight	model.encoder.layer.3.output.LayerNorm.bias	model.encoder.layer.4.attention.self.query.weight	model.encoder.layer.4.attention.self.query.bias	model.encoder.layer.4.attention.self.key.weight	model.encoder.layer.4.attention.self.key.bias	model.encoder.layer.4.attention.self.value.weight	model.encoder.layer.4.attention.self.value.bias	model.encoder.layer.4.attention.output.dense.weight	model.encoder.layer.4.attention.output.dense.bias	model.encoder.layer.4.attention.output.LayerNorm.weight	model.encoder.layer.4.attention.output.LayerNorm.bias	model.encoder.layer.4.intermediate.dense.weight	model.encoder.layer.4.intermediate.dense.bias	model.encoder.layer.4.output.dense.weight	model.encoder.layer.4.output.dense.bias	model.encoder.layer.4.output.LayerNorm.weight	model.encoder.layer.4.output.LayerNorm.bias	model.encoder.layer.5.attention.self.query.weight	model.encoder.layer.5.attention.self.query.bias	model.encoder.layer.5.attention.self.key.weight	model.encoder.layer.5.attention.self.key.bias	model.encoder.layer.5.attention.self.value.weight	model.encoder.layer.5.attention.self.value.bias	model.encoder.layer.5.attention.output.dense.weight	model.encoder.layer.5.attention.output.dense.bias	model.encoder.layer.5.attention.output.LayerNorm.weight	model.encoder.layer.5.attention.output.LayerNorm.bias	model.encoder.layer.5.intermediate.dense.weight	model.encoder.layer.5.intermediate.dense.bias	model.encoder.layer.5.output.dense.weight	model.encoder.layer.5.output.dense.bias	model.encoder.layer.5.output.LayerNorm.weight	model.encoder.layer.5.output.LayerNorm.bias	model.encoder.layer.6.attention.self.query.weight	model.encoder.layer.6.attention.self.query.bias	model.encoder.layer.6.attention.self.key.weight	model.encoder.layer.6.attention.self.key.bias	model.encoder.layer.6.attention.self.value.weight	model.encoder.layer.6.attention.self.value.bias	model.encoder.layer.6.attention.output.dense.weight	model.encoder.layer.6.attention.output.dense.bias	model.encoder.layer.6.attention.output.LayerNorm.weight	model.encoder.layer.6.attention.output.LayerNorm.bias	model.encoder.layer.6.intermediate.dense.weight	model.encoder.layer.6.intermediate.dense.bias	model.encoder.layer.6.output.dense.weight	model.encoder.layer.6.output.dense.bias	model.encoder.layer.6.output.LayerNorm.weight	model.encoder.layer.6.output.LayerNorm.bias	model.encoder.layer.7.attention.self.query.weight	model.encoder.layer.7.attention.self.query.bias	model.encoder.layer.7.attention.self.key.weight	model.encoder.layer.7.attention.self.key.bias	model.encoder.layer.7.attention.self.value.weight	model.encoder.layer.7.attention.self.value.bias	model.encoder.layer.7.attention.output.dense.weight	model.encoder.layer.7.attention.output.dense.bias	model.encoder.layer.7.attention.output.LayerNorm.weight	model.encoder.layer.7.attention.output.LayerNorm.bias	model.encoder.layer.7.intermediate.dense.weight	model.encoder.layer.7.intermediate.dense.bias	model.encoder.layer.7.output.dense.weight	model.encoder.layer.7.output.dense.bias	model.encoder.layer.7.output.LayerNorm.weight	model.encoder.layer.7.output.LayerNorm.bias	model.encoder.layer.8.attention.self.query.weight	model.encoder.layer.8.attention.self.query.bias	model.encoder.layer.8.attention.self.key.weight	model.encoder.layer.8.attention.self.key.bias	model.encoder.layer.8.attention.self.value.weight	model.encoder.layer.8.attention.self.value.bias	model.encoder.layer.8.attention.output.dense.weight	model.encoder.layer.8.attention.output.dense.bias	model.encoder.layer.8.attention.output.LayerNorm.weight	model.encoder.layer.8.attention.output.LayerNorm.bias	model.encoder.layer.8.intermediate.dense.weight	model.encoder.layer.8.intermediate.dense.bias	model.encoder.layer.8.output.dense.weight	model.encoder.layer.8.output.dense.bias	model.encoder.layer.8.output.LayerNorm.weight	model.encoder.layer.8.output.LayerNorm.bias	model.encoder.layer.9.attention.self.query.weight	model.encoder.layer.9.attention.self.query.bias	model.encoder.layer.9.attention.self.key.weight	model.encoder.layer.9.attention.self.key.bias	model.encoder.layer.9.attention.self.value.weight	model.encoder.layer.9.attention.self.value.bias	model.encoder.layer.9.attention.output.dense.weight	model.encoder.layer.9.attention.output.dense.bias	model.encoder.layer.9.attention.output.LayerNorm.weight	model.encoder.layer.9.attention.output.LayerNorm.bias	model.encoder.layer.9.intermediate.dense.weight	model.encoder.layer.9.intermediate.dense.bias	model.encoder.layer.9.output.dense.weight	model.encoder.layer.9.output.dense.bias	model.encoder.layer.9.output.LayerNorm.weight	model.encoder.layer.9.output.LayerNorm.bias	model.encoder.layer.10.attention.self.query.weight	model.encoder.layer.10.attention.self.query.bias	model.encoder.layer.10.attention.self.key.weight	model.encoder.layer.10.attention.self.key.bias	model.encoder.layer.10.attention.self.value.weight	model.encoder.layer.10.attention.self.value.bias	model.encoder.layer.10.attention.output.dense.weight	model.encoder.layer.10.attention.output.dense.bias	model.encoder.layer.10.attention.output.LayerNorm.weight	model.encoder.layer.10.attention.output.LayerNorm.bias	model.encoder.layer.10.intermediate.dense.weight	model.encoder.layer.10.intermediate.dense.bias	model.encoder.layer.10.output.dense.weight	model.encoder.layer.10.output.dense.bias	model.encoder.layer.10.output.LayerNorm.weight	model.encoder.layer.10.output.LayerNorm.bias	model.encoder.layer.11.attention.self.query.weight	model.encoder.layer.11.attention.self.query.bias	model.encoder.layer.11.attention.self.key.weight	model.encoder.layer.11.attention.self.key.bias	model.encoder.layer.11.attention.self.value.weight	model.encoder.layer.11.attention.self.value.bias	model.encoder.layer.11.attention.output.dense.weight	model.encoder.layer.11.attention.output.dense.bias	model.encoder.layer.11.attention.output.LayerNorm.weight	model.encoder.layer.11.attention.output.LayerNorm.bias	model.encoder.layer.11.intermediate.dense.weight	model.encoder.layer.11.intermediate.dense.bias	model.encoder.layer.11.output.dense.weight	model.encoder.layer.11.output.dense.bias	model.encoder.layer.11.output.LayerNorm.weight	model.encoder.layer.11.output.LayerNorm.bias	embedder.norm.weight	embedder.norm.bias	embedder.position_embeddings.weight	embedder.projection.weight	embedder.projection.bias	predictor.weight	predictor.bias
+using cuda
+
+------- Experiment Summary --------
+id: 20
+dataset: DEEPSEA 	batch size: 16 	lr: 1e-05
+num train batch: 4641 	num validation batch: 9313 	num test batch: 9313
+finetune method: all
+param count: 85483812 85483812
+wrapper1D(
+  (model): BertModel(
+    (embeddings): embedder_placeholder()
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0-11): 12 x BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): adaptive_pooler(
+      (pooler): AdaptiveAvgPool1d(output_size=1)
+    )
+  )
+  (embedder): Embeddings1D(
+    (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (position_embeddings): Embedding(512, 768)
+    (projection): Conv1d(4, 768, kernel_size=(2,), stride=(2,))
+  )
+  (predictor): Linear(in_features=768, out_features=36, bias=True)
+)
+
+------- Start Training --------
+epoch:  0
+[train full 0 0.000001 ] time elapsed: 1541.5090 	train loss: 0.8739 	val loss: 0.8308 	val score: 0.3879 	best val score: 0.3879
+epoch:  1
+[train full 1 0.000002 ] time elapsed: 1543.4556 	train loss: 0.8368 	val loss: 0.8273 	val score: 0.3802 	best val score: 0.3802
+epoch:  2
+[train full 2 0.000003 ] time elapsed: 1539.5499 	train loss: 0.8340 	val loss: 0.8196 	val score: 0.3724 	best val score: 0.3724
+epoch:  3
+[train full 3 0.000004 ] time elapsed: 1543.5666 	train loss: 0.8311 	val loss: 0.8387 	val score: 0.3819 	best val score: 0.3724
+epoch:  4
+[train full 4 0.000005 ] time elapsed: 1540.5272 	train loss: 0.8295 	val loss: 0.8225 	val score: 0.3678 	best val score: 0.3678
+epoch:  5
+[train full 5 0.000006 ] time elapsed: 1543.3985 	train loss: 0.8270 	val loss: 0.8170 	val score: 0.3629 	best val score: 0.3629
+epoch:  6
+[train full 6 0.000007 ] time elapsed: 1543.7719 	train loss: 0.8240 	val loss: 0.8265 	val score: 0.3592 	best val score: 0.3592
+epoch:  7
+[train full 7 0.000008 ] time elapsed: 1544.9361 	train loss: 0.8211 	val loss: 0.8128 	val score: 0.3516 	best val score: 0.3516
+epoch:  8
+[train full 8 0.000009 ] time elapsed: 1541.2157 	train loss: 0.8193 	val loss: 0.8091 	val score: 0.3473 	best val score: 0.3473
+epoch:  9
+[train full 9 0.000010 ] time elapsed: 1537.6540 	train loss: 0.8183 	val loss: 0.8093 	val score: 0.3477 	best val score: 0.3473
+epoch:  10
+[train full 10 0.000009 ] time elapsed: 1535.9491 	train loss: 0.8171 	val loss: 0.8132 	val score: 0.3498 	best val score: 0.3473
+epoch:  11
+[train full 11 0.000009 ] time elapsed: 1536.5403 	train loss: 0.8156 	val loss: 0.8091 	val score: 0.3458 	best val score: 0.3458
+epoch:  12
+[train full 12 0.000008 ] time elapsed: 1538.7398 	train loss: 0.8147 	val loss: 0.8063 	val score: 0.3449 	best val score: 0.3449
+
+------- Start Test --------
+[test last] 	time elapsed: 1101.4068 	test loss: 0.8063 	test score: 0.3451
+[test best-validated] 	time elapsed: 1100.2045 	test loss: 0.8064 	test score: 0.3449

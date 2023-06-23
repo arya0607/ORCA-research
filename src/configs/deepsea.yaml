@@ -10,7 +10,7 @@ hyperparameters:
     maxsamples: 64
     target_seq_len: 512
 
-    experiment_id: 10
+    experiment_id: 20
     seed: 0
     epochs: 13
     embedder_epochs: 60
