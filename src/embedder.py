@@ -109,13 +109,12 @@ class wrapper1D(torch.nn.Module):
             self.model.classifier = nn.Identity() 
 
         else:
-            modelname = 'distilroberta-base' if weight[:7] == 'roberta' else 'bert-base-uncased'
-            path = './../../DNABERT/6_pretrained/'
-            configuration = AutoConfig.from_pretrained(path + 'config.json')
+            modelname = 'roberta-base' if weight[:7] == 'roberta' else 'bert-base-uncased'
+            configuration = AutoConfig.from_pretrained(modelname)
             if drop_out is not None:
                 configuration.hidden_dropout_prob = drop_out
                 configuration.attention_probs_dropout_prob = drop_out
-            self.model = AutoModel.from_pretrained(path + 'pytorch_model.bin', config = configuration) if not from_scratch else AutoModel.from_config(configuration)
+            self.model = AutoModel.from_pretrained(modelname, config = configuration) if not from_scratch else AutoModel.from_config(configuration)
 
         if use_embedder:
             self.embedder = Embeddings1D(input_shape, config=self.model.config, embed_dim=128 if weight == 'swin' else 768, target_seq_len=1024 if weight == 'swin' else target_seq_len, dense=self.dense)

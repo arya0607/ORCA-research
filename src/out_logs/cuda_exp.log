@@ -1,6 +1,0 @@
-ot.gpu not found - coupling computation will be in cpu
-[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
-config:  ./configs/deepsea.yaml
-args.device:  cuda
-NVIDIA GeForce RTX 3090
-NVIDIA GeForce RTX 3090
