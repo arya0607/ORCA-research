@@ -268,6 +268,26 @@ def load_spherical(root, batch_size, valid_split=-1, maxsize=None):
         return train_loader, val_loader, test_loader
     return train_loader, None, test_loader
 
+def load_510_deepsea(root, batch_size):
+
+    train_x = np.load('./../../build-deepsea-training-dataset/out/sampled_train_x.npy')
+    train_y = np.load('./../../build-deepsea-training-dataset/out/sampled_train_y.npy')
+    test_x = np.load('./../../build-deepsea-training-dataset/out/sampled_test_x.npy')
+    test_y = np.load('./../../build-deepsea-training-dataset/out/sampled_test_y.npy')
+
+    x_train = torch.from_numpy(train_x).transpose(-1, -2).float()  
+    y_train = torch.from_numpy(train_y).float()
+
+    x_test = torch.from_numpy(test_x).transpose(-1, -2).float()  # shape = 
+    y_test = torch.from_numpy(test_y).float()   # shape = 
+
+    count_workers = 3
+    
+    train_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_train, y_train), batch_size = batch_size, shuffle=True, num_workers=count_workers, pin_memory=True)
+    test_loader = torch.utils.data.DataLoader(torch.utils.data.TensorDataset(x_test, y_test), batch_size = batch_size, shuffle=True, num_workers=count_workers, pin_memory=True)
+
+    return train_loader, None, test_loader
+
 
 def load_deepsea(root, batch_size, one_hot = True, valid_split=-1):
     filename = root + '/deepsea_filtered.npz'
